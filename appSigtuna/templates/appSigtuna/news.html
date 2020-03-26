@@ -1,0 +1,51 @@
+{% extends 'appSigtuna/base.html' %}
+{% block title %}
+    Sigtuna Football Academy : News
+{% endblock %}
+
+{% block content %}
+{% if infoNews %}
+<div class="container">
+    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="text-align:center; margin-top: 9px; margin-bottom: 30px;">
+            <h4><strong style="border-top: solid; border-bottom: solid; border-color: grey; Font-family: Oswald;">OUR NEWS</strong></h4>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    {% for infoNews in infoNews %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card mb-3">
+              <img src="{{infoNews.image.url}}" class="card-img-top" alt="..." style="max-width: 50%; max-height: auto;">
+              <div class="card-body">
+                <h5 class="card-title" style="Font-family: Teko;">{{infoNews.title}}</h5>
+                <p class="card-text" style="Font-family: Dosis;">{{infoNews.Story}}</p>
+                <p class="card-text" style="Font-family: Dosis;"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+                <div id="modalClients" class="modal fade"  role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                               <h4 style="Font-family: Prata;"><b>Donations</b></h4>
+                           </div>
+                            <div class="modal-body">
+                                    <ul>
+                                        <li><h5 style="Font-family: Pacifico;"><b>Business Number</b>:</h5>##############<br>
+                                        <li><h5 style="Font-family: Pacifico;"><b>Account Number</b>:</h5>##############<br>
+                                   </ul>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endif %}
+{% endblock %}

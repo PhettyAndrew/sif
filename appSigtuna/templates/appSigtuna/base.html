@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+
+    <!--Title icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="#">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+</head>
+<body>
+<div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px; padding: 10px;">
+  <div class="row">
+    <div class="col-sm-1">
+        <a href="{% url 'appSigtuna:index' %}">
+            <img src="../static/appSigtuna/images/logo.jpg" style="max-width: 100%; max-height: auto;" alt="...">
+        </a>
+    </div>
+    <div class="col-sm-4">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-facebook-f" ></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-instagram" ></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-twitter" ></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-linkedin" ></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <div class="col-sm-7">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="mailto:sigtunafoundation@gmail.com" target="_blank" style="Font-family: Oswald;">
+            <i class="fas fa-envelope" >
+              Sigtunafoundation@gmail.com
+            </i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#" style="Font-family: Oswald;">
+            <i class="fas fa-phone">
+              +254700000000
+            </i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" style="font-family: Alfa Slab One;" href="{% url 'appSigtuna:index' %}">SIGTUNA FOOTBALL ACADEMY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 100px;">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'appSigtuna:index' %}" style="Font-family: Oswald;">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'appSigtuna:news' %}" style="Font-family: Oswald;">NEWS</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="Font-family: Oswald;">MATCHES</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'appSigtuna:team' %}" style="Font-family: Oswald;">TEAM</a>
+          </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'appSigtuna:gallery' %}" style="Font-family: Oswald;">GALLERY</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#modalClients" data-toggle="modal" style="Font-family: Oswald;">DONATE</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+{% block content %}
+{% endblock %}
+
+<div class="container-fluid bg-dark" style="color: #ffffff;">
+    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="col-sm-6">
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h5 style="Font-family: Oswald;">Quick Menu</h5>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul>
+                        <li style="Font-family: Dosis;"><a href="{% url 'appSigtuna:index' %}">Home</a></li>
+                        <li style="Font-family: Dosis;"><a href="{% url 'appSigtuna:news' %}">News</a></li>
+                        <li style="Font-family: Dosis;"><a href="#">Matches</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li style="Font-family: Dosis;"><a href="{% url 'appSigtuna:team' %}">Team</a></li>
+                        <li style="Font-family: Dosis;"><a href="{% url 'appSigtuna:gallery' %}">Gallery</a></li>
+                        <li style="Font-family: Dosis;"><a href="#modalClients" data-toggle="modal">Donate</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h5 style="Font-family: Oswald;">Follow Us</h5>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-9">
+                    <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fab fa-facebook-f" ></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fab fa-instagram" ></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fab fa-twitter" ></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fab fa-linkedin" ></i>
+                    </a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
+        <div class="col-sm-6" style="margin-top:20px; margin-bottom:20px;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <video style="max-width: 80%; max-height: auto;" controls>
+                       <source src="../static/appSigtuna/videos/vid1.mp4" type="video/mp4">
+                   </video>
+                </div>
+                <div class="col-sm-6">
+                    <video style="max-width: 80%; max-height: auto;" controls>
+                       <source src="../static/appSigtuna/videos/vid2.mp4" type="video/mp4">
+                   </video>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-12">
+                    <h3 style="Font-family: Oswald;">Subscribe Newsletter</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p style="Font-family: Dosis;">Get frequent newsletters from Sigtuna Football Academy</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                      <form action="#" method="post">
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control border-secondary text-white bg-transparent" style="Font-family: Dosis;" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="button-addon2" style="Font-family: Dosis;">Send</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin: 50px;"></div>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8" style="text-align:center;">
+            <h6 style="Font-family: Oswald;"><a href="https://onyangoabila.pythonanywhere.com">loadNut Studio Developers</a></h6>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="display: inline-block; text-align: center;">
+                    <a class="w3-large center" href="mailto:loadnut7@gmail.com" target="_blank" style="display: inline-block; size: 10px;">
+                        <i class="fab fa-google-plus" style="color: #FFFFFF; padding: 5px;"></i>
+                    </a>
+                    <a class="w3-large center" href="https://www.youtube.com/channel/UCTSCmMp82VkZhy8C8H-jpyg" target="_blank" style="display: inline-block; size: 10px;">
+                        <i class="fab fa-youtube" style="color: #FFFFFF; padding: 5px;"></i>
+                    </a>
+                    <a class="w3-large center" href="https://www.facebook.com/andrew.abila.5" target="_blank" style="display: inline-block; size: 10px;">
+                        <i class="fab fa-facebook" style="color: #FFFFFF; padding: 5px;"></i>
+                    </a>
+                    <a class="w3-large center" href="https://ke.linkedin.com/in/andrew-abila-274330184" target="_blank" style="display: inline-block; size: 10px;">
+                        <i class="fab fa-linkedin" style="color: #FFFFFF; padding: 5px;"></i>
+                    </a>
+                    <a class="w3-large center" href="https://github.com/PhettyAndrew" target="_blank" style="display: inline-block; size: 10px;">
+                        <i class="fab fa-github" style="color: #FFFFFF; padding: 5px;"></i>
+                    </a>
+                    <a class="w3-large center" href="#" target="_blank" style="display: inline-block; size: 10px;">
+                        <i class="fab fa-twitter" style="color: #FFFFFF; padding: 5px;"></i>
+                    </a>
+                    <a class="w3-large" href="#" target="_blank" style="display: inline-block; size: 10px;">
+                        <i class="fab fa-skype" style="color: #FFFFFF; padding: 5px;"></i>
+                    </a>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+</div>
+</body>
+</html>

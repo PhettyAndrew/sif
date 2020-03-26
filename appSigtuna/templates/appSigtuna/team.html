@@ -1,0 +1,60 @@
+{% extends 'appSigtuna/base.html' %}
+{% block title %}
+    Sigtuna Football Academy : Team
+{% endblock %}
+
+{% block content %}
+{% if infoTeam %}
+
+<div class="container">
+    <div class="row" style="margin: 20px;">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="text-align:center;">
+            <h4><strong style="border-top: solid; border-bottom: solid; border-color: grey; Font-family: Oswald;">OUR TEAM</strong></h4>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    {% for infoTeam in infoTeam %}
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="card mb-3 bg-light" style="max-width: 540px; border-color: #ffffff;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="{{infoTeam.image.url}}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">{{infoTeam.name}}</h5>
+                    <p style="text-color: #dcdcdc; Font-family: Dosis;">25 years</p>
+                    <p class="card-text" style="Font-family: Dosis;">{{infoTeam.title}}</p>
+                    <a href="mailto:{{infoTeam.email}}"><button type="button" class="btn btn-outline-danger" style="Font-family: Dosis;">EMAIL</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="container">
+                <div id="modalClients" class="modal fade"  role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                               <h4 style="Font-family: Prata;"><b>Donations</b></h4>
+                           </div>
+                            <div class="modal-body">
+                                    <ul>
+                                        <li><h5 style="Font-family: Pacifico;"><b>Business Number</b>:</h5>##############<br>
+                                        <li><h5 style="Font-family: Pacifico;"><b>Account Number</b>:</h5>##############<br>
+                                   </ul>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

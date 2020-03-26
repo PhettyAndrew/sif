@@ -1,0 +1,40 @@
+{% extends 'appSigtuna/base.html' %}
+{% block title %}
+    Sigtuna Football Academy : Gallery
+{% endblock %}
+
+{% block content %}
+{% if infoGallery %}
+<div class="container">
+    {% for infoGallery in infoGallery %}
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-6">
+            <img src="{{infoGallery.image.url}}" style="max-width: 60%; max-height: 50%;">
+        </div>
+        <div class="col-sm-6">
+            <p style="Font-family: Dosis;">{{infoGallery.description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+                <div id="modalClients" class="modal fade"  role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                               <h4 style="Font-family: Prata;"><b>Donations</b></h4>
+                           </div>
+                            <div class="modal-body">
+                                    <ul>
+                                        <li><h5 style="Font-family: Pacifico;"><b>Business Number</b>:</h5>##############<br>
+                                        <li><h5 style="Font-family: Pacifico;"><b>Account Number</b>:</h5>##############<br>
+                                   </ul>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endif %}
+{% endblock %}
