@@ -8,6 +8,7 @@ class GeneralInfo(models.Model):
     email = models.EmailField(max_length=40)
     phoneNumber = models.IntegerField()
     about = models.TextField(max_length=None)
+    history=models.TextField(max_length=None, null=True)
 
 #images model
 class ShowImages(models.Model):

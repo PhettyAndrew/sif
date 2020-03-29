@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from . models import Management, Team, News, Donations, Support, GeneralInfo, ShowImages
 from .forms import SupporterForm
+from django.views.generic import ListView
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 
@@ -26,10 +28,22 @@ def news(request):
     return render(request,'appSigtuna/news.html',context)
 
 def gallery(request):
-    infoGallery=ShowImages.objects.all
+    infoGallery=ShowImages.objects.all()
+    paginator = Paginator(infoGallery, 3)
+    page = request.GET.get('page' ,1)
+
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+
     context={
-        'infoGallery':infoGallery
+        'posts': posts
     }
+
     return render(request,'appSigtuna/gallery.html',context)
 
 def supporter(request):

@@ -26,7 +26,7 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">{{infoTeam.name}}</h5>
-                    <p style="text-color: #dcdcdc; Font-family: Dosis;">25 years</p>
+                    <p style="text-color: #dcdcdc; Font-family: Dosis;">{{infoTeam.age}}</p>
                     <p class="card-text" style="Font-family: Dosis;">{{infoTeam.title}}</p>
                     <a href="mailto:{{infoTeam.email}}"><button type="button" class="btn btn-outline-danger" style="Font-family: Dosis;">EMAIL</button></a>
                   </div>
@@ -36,24 +36,34 @@
         </div>
         <div class="col-sm-2"></div>
     </div>
+
     <div class="container">
-                <div id="modalClients" class="modal fade"  role="dialog">
-                    <div class="modal-dialog modal-md">
-                        <div class="modal-content">
-                           <div class="modal-header">
-                               <h4 style="Font-family: Prata;"><b>Donations</b></h4>
-                           </div>
-                            <div class="modal-body">
-                                    <ul>
-                                        <li><h5 style="Font-family: Pacifico;"><b>Business Number</b>:</h5>##############<br>
-                                        <li><h5 style="Font-family: Pacifico;"><b>Account Number</b>:</h5>##############<br>
-                                   </ul>
-                            </div>
-                            <div class="modal-footer"></div>
-                        </div>
+        <div id="modalClients" class="modal fade"  role="dialog">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                   <div class="modal-header">
+                       <h4 style="Font-family: Prata;"><b>Donations</b></h4>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                   </div>
+                    <div class="modal-body">
+                            <ul>
+                                <li>
+                                    <h5 style="Font-family: Pacifico;"><b>MPESA Detail</b>:</h5>
+                                    <p style="Font-family: Dosis;">Account name: wagwe sigtuna<br>Till number: 5126191<br></p>
+                                </li>
+                                <li>
+                                    <h5 style="Font-family: Pacifico;"><b>KCB Account Number</b>:</h5>
+                                    <p style="Font-family: Dosis;">1271741490<br></p>
+                                </li>
+                           </ul>
                     </div>
+                    <div class="modal-footer"></div>
                 </div>
             </div>
+        </div>
+    </div>
     {% endfor %}
 </div>
 {% endif %}

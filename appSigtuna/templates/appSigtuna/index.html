@@ -72,6 +72,7 @@
                 </div>
                 <div class="col-sm-6">
                     <img src="../static/appSigtuna/images/display2.jpg" style="max-width: 100%; max-height: auto;">
+                    <p style="Font-family: Dosis;">David Magoma Onyango<br>C.E.O Sigtuna Foundation</p>
                 </div>
             </div>
         </div>
@@ -87,7 +88,7 @@
                 <div class="row" >
                     <div class="col-sm-4">
                         <div class="row"  style="margin-top: 20px; margin-bottom: 20px;">
-                            <button type="button" class="btn btn-outline-light">
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target=".modalHistory">
                                 <i class="fas fa-history fa-5x" style="margin: 20px;"></i>
                             </button>
                         </div>
@@ -113,12 +114,12 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="row"  style="margin-top: 20px; margin-bottom: 20px;">
-                            <button type="button" class="btn btn-outline-light">
-                                <i class="fas fa-user-friends fa-5x" style="margin: 20px;"></i>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target=".modalCoach">
+                               <i class="fas fa-user-friends fa-5x" style="margin: 20px;"></i>
                             </button>
                         </div>
                         <div class="row">
-                            <h5 style="color: #ffffff; Font-family: Teko;">Coaches</h5>
+                            <h5 style="color: #ffffff; Font-family: Teko;">Trainers</h5>
                         </div>
                         <div class="row">
                             <p style="color: #ffffff; Font-family: Dosis;">The best of trainers in the mix</p>
@@ -144,9 +145,9 @@
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Oluoch Sadam</h5>
-                                <p style="text-color: #dcdcdc; Font-family: Dosis;">25 years</p>
-                                <p class="card-text" style="Font-family: Dosis;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Ronnie</h5>
+                                <p style="text-color: #dcdcdc; Font-family: Dosis;">20 years</p>
+                                <p class="card-text" style="Font-family: Dosis;"><small>Defender</small></p>
                                 <button type="button" class="btn btn-outline-danger" style="Font-family: Dosis;">EMAIL</button>
                               </div>
                             </div>
@@ -161,9 +162,9 @@
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Card title</h5>
-                                <p style="text-color: #dcdcdc; Font-family: Dosis;">25 years</p>
-                                <p class="card-text" style="Font-family: Dosis;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Abujo</h5>
+                                <p style="text-color: #dcdcdc; Font-family: Dosis;">17 years</p>
+                                <p class="card-text" style="Font-family: Dosis;"><small>Defender</small></p>
                                 <button type="button" class="btn btn-outline-danger" style="Font-family: Dosis;">EMAIL</button>
                               </div>
                             </div>
@@ -180,9 +181,9 @@
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Card title</h5>
-                                <p style="text-color: #dcdcdc; Font-family: Dosis;">25 years</p>
-                                <p class="card-text" style="Font-family: Dosis;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Collins</h5>
+                                <p style="text-color: #dcdcdc; Font-family: Dosis;">20 years</p>
+                                <p class="card-text" style="Font-family: Dosis;"><small>Midfielder</small></p>
                                 <button type="button" class="btn btn-outline-danger" style="Font-family: Dosis;">EMAIL</button>
                               </div>
                             </div>
@@ -197,9 +198,9 @@
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Card title</h5>
-                                <p style="text-color: #dcdcdc; Font-family: Dosis;">25 years</p>
-                                <p class="card-text" style="Font-family: Dosis;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title" style="border-bottom: solid; border-color: #dcdcdc; Font-family: Teko;">Name</h5>
+                                <p style="text-color: #dcdcdc; Font-family: Dosis;">Age</p>
+                                <p class="card-text" style="Font-family: Dosis;"><small>Player</small></p>
                                 <button type="button" class="btn btn-outline-danger" style="Font-family: Dosis;">EMAIL</button>
                               </div>
                             </div>
@@ -227,14 +228,35 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="row" style="margin-left: 20px; margin-bottom: 20px;">
-                            <a href="#">
-                                <img src="../static/appSigtuna/images/news.jpg" style="max-width: 80%; max-height: auto;">
+                            <a href="{% url 'appSigtuna:news' %}">
+                                <img src="../static/appSigtuna/images/corona.jpg" style="max-width: 80%; max-height: auto;">
                             </a>
                         </div>
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-9">
-                                <h5 style="Font-family: Teko;">News 1</h5>
+                                <h5 style="Font-family: Teko;">Corona Virus</h5>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-9">
+                                <p style="Font-family: Dosis;">Last Updated 2 weeks ago</p>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row" style="margin-left: 20px; margin-bottom: 20px;">
+                            <a href="{% url 'appSigtuna:news' %}">
+                                <img src="../static/appSigtuna/images/admissions.jpg" style="max-width: 80%; max-height: auto;">
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-9">
+                                <h5 style="Font-family: Teko;">Admissions Open</h5>
                             </div>
                             <div class="col-sm-2"></div>
                         </div>
@@ -248,28 +270,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="row" style="margin-left: 20px; margin-bottom: 20px;">
-                            <a href="#">
-                                <img src="../static/appSigtuna/images/news.jpg" style="max-width: 80%; max-height: auto;">
-                            </a>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-9">
-                                <h5 style="Font-family: Teko;">News 2</h5>
-                            </div>
-                            <div class="col-sm-2"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-9">
-                                <p style="Font-family: Dosis;">Last Updated 1 day ago</p>
-                            </div>
-                            <div class="col-sm-2"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="row" style="margin-left: 20px; margin-bottom: 20px;">
-                            <a href="#">
+                            <a href="{% url 'appSigtuna:news' %}">
                                 <img src="../static/appSigtuna/images/news.jpg" style="max-width: 80%; max-height: auto;">
                             </a>
                         </div>
@@ -340,17 +341,119 @@
                         <div class="modal-content">
                            <div class="modal-header">
                                <h4 style="Font-family: Prata;"><b>Donations</b></h4>
+                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
                            </div>
                             <div class="modal-body">
                                     <ul>
-                                        <li><h5 style="Font-family: Pacifico;"><b>Business Number</b>:</h5>##############<br>
-                                        <li><h5 style="Font-family: Pacifico;"><b>Account Number</b>:</h5>##############<br>
+                                        <li>
+                                            <h5 style="Font-family: Pacifico;"><b>MPESA Detail</b>:</h5>
+                                            <p style="Font-family: Dosis;">Account name: wagwe sigtuna<br>Till number: 5126191<br></p>
+                                        </li>
+                                        <li>
+                                            <h5 style="Font-family: Pacifico;"><b>KCB Account Number</b>:</h5>
+                                            <p style="Font-family: Dosis;">1271741490<br></p>
+                                        </li>
                                    </ul>
                             </div>
                             <div class="modal-footer"></div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="container">
+                <div class="modal fade modalCoach" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                          <h4 style="Font-family: Prata;"><b>Coaches</b></h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="row">
+                              <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
+                              <div class="row no-gutters">
+                                <div class="col-md-4">
+                                  <img src="../static/appSigtuna/images/coach.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="Font-family: Teko;">Musa Ochoo</h5>
+                                    <p class="card-text" style="Font-family: Dosis;">Head Coach</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
+                              <div class="row no-gutters">
+                                <div class="col-md-4">
+                                  <img src="../static/appSigtuna/images/asst_coach.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="Font-family: Teko;">Mike Ogwang</h5>
+                                    <p class="card-text" style="Font-family: Dosis;">Assistant Coach</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
+                              <div class="row no-gutters">
+                                <div class="col-md-4">
+                                  <img src="../static/appSigtuna/images/gkp_trainer.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="Font-family: Teko;">Tom Kadwe</h5>
+                                    <p class="card-text" style="Font-family: Dosis;">Goalkeeper Trainer</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
+                              <div class="row no-gutters">
+                                <div class="col-md-4">
+                                  <img src="../static/appSigtuna/images/asst_chief.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="Font-family: Teko;">Chief George Odhiambo</h5>
+                                    <p class="card-text" style="Font-family: Dosis;">Security Coordinator</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal fade modalHistory" id="modalHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle" style="Font-family: Prata;">History of Academy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p style="Font-family: Dosis;">{{infos.history}}</p>
+                  </div>
+                </div>
+              </div>
             </div>
         {% endfor %}
     {% endif %}
