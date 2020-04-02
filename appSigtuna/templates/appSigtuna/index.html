@@ -10,15 +10,14 @@
               <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
             </ol>
             <div class="carousel-inner" style="height: 600px;">
               <div class="carousel-item active">
-                <img src="../static/appSigtuna/images/slide2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="../static/appSigtuna/images/slide3.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
                 <img src="../static/appSigtuna/images/slide4.jpg" class="d-block w-100" alt="...">
               </div>
                 <div class="carousel-item">
@@ -58,10 +57,10 @@
         {% for infos in infoIndex %}
             <div class="container" style="margin: 50px;">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-5">
                     <div class="card mb-3 bg-light" style="max-width: 600px; max-height: 500px;">
                       <div class="row no-gutters">
-                        <div class="col-md-8">
+                        <div class="col-lg-12">
                           <div class="card-body">
                             <h5 class="card-title" style="Font-family: Oswald;">About Us</h5>
                             <p class="card-text" style="Font-family: Dosis;">{{infos.about}}</p>
@@ -70,9 +69,13 @@
                       </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <img src="../static/appSigtuna/images/display2.jpg" style="max-width: 100%; max-height: auto;">
+                <div class="col-sm-4">
+                    <img src="http://sigtunafoundation.pythonanywhere.com/media/ceo.jpg" style="max-width: 100%; max-height: auto;">
                     <p style="Font-family: Dosis;">David Magoma Onyango<br>C.E.O Sigtuna Foundation</p>
+                </div>
+                <div class="col-sm-3">
+                    <img src="http://sigtunafoundation.pythonanywhere.com/media/coordinator.jpg" style="max-width: 100%; max-height: auto;">
+                    <p style="Font-family: Dosis;">Suzan Olal<br>Coordinator Sigtuna Foundation</p>
                 </div>
             </div>
         </div>
@@ -141,7 +144,7 @@
                         <div class="card mb-3 bg-light" style="max-width: 540px; border-color: #ffffff;">
                           <div class="row no-gutters">
                             <div class="col-md-4">
-                              <img src="../static/appSigtuna/images/player1.jpg" class="card-img" alt="...">
+                              <img src="http://sigtunafoundation.pythonanywhere.com/media/IMG-20200318-WA0016.jpg" class="card-img" alt="...">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
@@ -158,7 +161,7 @@
                         <div class="card mb- bg-light" style="max-width: 540px; border-color: #ffffff;">
                           <div class="row no-gutters">
                             <div class="col-md-4">
-                              <img src="../static/appSigtuna/images/player2.jpg" class="card-img" alt="...">
+                              <img src="http://sigtunafoundation.pythonanywhere.com/media/Player_2.jpg" class="card-img" alt="...">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
@@ -177,7 +180,7 @@
                         <div class="card mb-3 bg-light" style="max-width: 540px; border-color: #ffffff;">
                           <div class="row no-gutters">
                             <div class="col-md-4">
-                              <img src="../static/appSigtuna/images/player3.jpg" class="card-img" alt="...">
+                              <img src="http://sigtunafoundation.pythonanywhere.com/media/IMG-20200318-WA0011.jpg" class="card-img" alt="...">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
@@ -194,7 +197,7 @@
                         <div class="card mb-3 bg-light" style="max-width: 540px; border-color: #ffffff;">
                           <div class="row no-gutters">
                             <div class="col-md-4">
-                              <img src="../static/appSigtuna/images/player4.jpg" class="card-img" alt="..." style="max-width:100%; max-height:auto;">
+                              <img src="http://sigtunafoundation.pythonanywhere.com/media/IMG-20200318-WA0002.jpg" class="card-img" alt="..." style="max-width:100%; max-height:auto;">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
@@ -229,7 +232,7 @@
                     <div class="col-sm-4">
                         <div class="row" style="margin-left: 20px; margin-bottom: 20px;">
                             <a href="{% url 'appSigtuna:news' %}">
-                                <img src="../static/appSigtuna/images/corona.jpg" style="max-width: 80%; max-height: auto;">
+                                <img src="http://sigtunafoundation.pythonanywhere.com/media/images.jpg" style="max-width: 80%; max-height: auto;">
                             </a>
                         </div>
                         <div class="row">
@@ -250,7 +253,7 @@
                     <div class="col-sm-4">
                         <div class="row" style="margin-left: 20px; margin-bottom: 20px;">
                             <a href="{% url 'appSigtuna:news' %}">
-                                <img src="../static/appSigtuna/images/admissions.jpg" style="max-width: 80%; max-height: auto;">
+                                <img src="http://sigtunafoundation.pythonanywhere.com/media/images_1_KhnedOk.jpg" style="max-width: 80%; max-height: auto;">
                             </a>
                         </div>
                         <div class="row">
@@ -336,40 +339,13 @@
             </div>
 
             <div class="container">
-                <div id="modalClients" class="modal fade"  role="dialog">
-                    <div class="modal-dialog modal-md">
-                        <div class="modal-content">
-                           <div class="modal-header">
-                               <h4 style="Font-family: Prata;"><b>Donations</b></h4>
-                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                           </div>
-                            <div class="modal-body">
-                                    <ul>
-                                        <li>
-                                            <h5 style="Font-family: Pacifico;"><b>MPESA Detail</b>:</h5>
-                                            <p style="Font-family: Dosis;">Account name: wagwe sigtuna<br>Till number: 5126191<br></p>
-                                        </li>
-                                        <li>
-                                            <h5 style="Font-family: Pacifico;"><b>KCB Account Number</b>:</h5>
-                                            <p style="Font-family: Dosis;">1271741490<br></p>
-                                        </li>
-                                   </ul>
-                            </div>
-                            <div class="modal-footer"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
                 <div class="modal fade modalCoach" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                          <h4 style="Font-family: Prata;"><b>Coaches</b></h4>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="https://scontent.fnbo4-1.fna.fbcdn.net/v/t1.0-9/s960x960/91398095_129874035263157_721622580959641600_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_eui2=AeEvEgLB4XvQvH6jR8jdtN6NijJfpr2SaAAdFq56y4i7vc6DNpReNmGsh0BidJuiQbWJtig4b0erOL0ZKnyJLnDUrQ_Oz736yVZEeRsJ1nm74g&_nc_oc=AQmm9E_OFYYySziWizcjZIgQ9LxS4pMOWKX2xSWv83Hp8COX4FZivcTIhqHuoCJyZR8&_nc_ht=scontent.fnbo4-1.fna&_nc_tp=7&oh=e9195dbfecb18e8e4b54d230485bc155&oe=5EA9FD3A" style="max-width: 10%; max-height: auto; alt="...">
+                            <h4 style="Font-family: Prata;"><b>Trainers</b></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
                       </div>
@@ -378,7 +354,7 @@
                               <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
                               <div class="row no-gutters">
                                 <div class="col-md-4">
-                                  <img src="../static/appSigtuna/images/coach.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                  <img src="http://sigtunafoundation.pythonanywhere.com/media/coach.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
                                 </div>
                                 <div class="col-md-8">
                                   <div class="card-body">
@@ -393,7 +369,7 @@
                               <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
                               <div class="row no-gutters">
                                 <div class="col-md-4">
-                                  <img src="../static/appSigtuna/images/asst_coach.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                  <img src="http://sigtunafoundation.pythonanywhere.com/media/asst_coach.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
                                 </div>
                                 <div class="col-md-8">
                                   <div class="card-body">
@@ -408,7 +384,7 @@
                               <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
                               <div class="row no-gutters">
                                 <div class="col-md-4">
-                                  <img src="../static/appSigtuna/images/gkp_trainer.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                  <img src="http://sigtunafoundation.pythonanywhere.com/media/gkp_trainer.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
                                 </div>
                                 <div class="col-md-8">
                                   <div class="card-body">
@@ -423,7 +399,7 @@
                               <div class="card mb-3 bg-light" style="max-width: 100%; margin: 20px; border-color: #ffffff;">
                               <div class="row no-gutters">
                                 <div class="col-md-4">
-                                  <img src="../static/appSigtuna/images/asst_chief.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
+                                  <img src="http://sigtunafoundation.pythonanywhere.com/media/asst_chief.jpg" class="card-img" alt="..." style="max-width: 100%; max-height: auto;">
                                 </div>
                                 <div class="col-md-8">
                                   <div class="card-body">
@@ -444,6 +420,7 @@
               <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
+                    <img src="https://scontent.fnbo4-1.fna.fbcdn.net/v/t1.0-9/s960x960/91398095_129874035263157_721622580959641600_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_eui2=AeEvEgLB4XvQvH6jR8jdtN6NijJfpr2SaAAdFq56y4i7vc6DNpReNmGsh0BidJuiQbWJtig4b0erOL0ZKnyJLnDUrQ_Oz736yVZEeRsJ1nm74g&_nc_oc=AQmm9E_OFYYySziWizcjZIgQ9LxS4pMOWKX2xSWv83Hp8COX4FZivcTIhqHuoCJyZR8&_nc_ht=scontent.fnbo4-1.fna&_nc_tp=7&oh=e9195dbfecb18e8e4b54d230485bc155&oe=5EA9FD3A" style="max-width: 10%; max-height: auto; alt="...">
                     <h5 class="modal-title" id="exampleModalCenterTitle" style="Font-family: Prata;">History of Academy</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
